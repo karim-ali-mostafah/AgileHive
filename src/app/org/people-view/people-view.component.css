@@ -1,0 +1,51 @@
+.main {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 3px;
+  margin-bottom:3px;
+}
+.fa-magnifying-glass {
+    position: relative;
+    top: 8px; /* Adjust the vertical position as needed */
+    margin-right: 5px; /* Adjust the spacing between the icon and the input */
+  }
+  ::ng-deep .mat-tab-label {
+    font-size: 10px; /* Adjust as needed */
+    justify-content: flex-start;
+  }
+.bread{
+  margin: 10px;
+}
+.tables{
+  margin-left: 2rem;
+}
+.with-icon {
+    background-image: url('src\assets\img\landing\magnifying-glass-solid.svg'); /* Replace 'path/to/your-magnifying-glass-icon.svg' with the actual path to your icon */
+    background-size: 20px; /* Adjust the size of the icon */
+    background-repeat: no-repeat;
+    background-position: 10px center; /* Adjust the position of the icon */
+    padding-left: 40px; /* Adjust the padding to make space for the icon */
+  }
+  .left {
+    margin-right: auto;
+  }
+  
+  .right {
+    margin-left: auto;
+}
+.form-control {
+    margin-left:2rem;
+    width: 500px; /* Adjust the width as needed */
+    height: 40px; /* Adjust the height as needed */
+  }
+.btn {
+  font-family: sans-serif !important;
+  background-color: #f8f8f8;
+  color: #333;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+  display: inline-block;
+  font-size: 16px;
+  margin-right: 20px;
+} 

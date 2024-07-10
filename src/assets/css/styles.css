@@ -1,0 +1,229 @@
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+@import "~bootstrap/dist/css/bootstrap.css";
+
+:root {
+  --main-color: 52,167,248;
+  --secondary-color: 85,51,255;
+  --alternative-color: 62,207,142;
+  --primary-color-light: #B3E1FF;
+  --primary-color: #87C4FF;
+  --primary-color-dark: #5A9CE6;
+  --ascent-color-light: #6AA3E0;
+  --ascent-color: #4684CC;
+  --ascent-color-dark: #3069A3;
+  --secondary-color-light: #1E8FFF;
+  --secondary-color: #0066CC;
+  --secondary-color-dark: #004080;
+  --background-color-light: #FFD7A3;
+  --background-color: #FFC280;
+  --background-color-dark: #CC9966;
+}
+
+
+
+.clear {
+  clear: both; }
+
+.mt {
+  margin-top: 80px; }
+
+.mt-30 {
+  margin-top: 30px; }
+
+.mb-30 {
+  margin-bottom: 30px; }
+
+.pt-30 {
+  padding-top: 30px; }
+
+.pb-30 {
+  padding-bottom: 30px; }
+
+.pt-70 {
+  padding-top: 70px; }
+
+.mb-50 {
+  margin-bottom: 50px; }
+
+.padding-0 {
+  padding: 0; }
+
+.pr-20 {
+  padding-right: 20px; }
+
+.pl-20 {
+  padding-left: 20px; }
+
+.pl-70 {
+  padding-left: 70px; }
+
+.pr-70 {
+  padding-right: 70px; }
+
+.main-second-btn {
+  background-color: #3c9cfd !important;
+  color: #fff !important;
+  padding: 10px 30px !important;
+  font-size: 14px !important;
+  font-weight: 500 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 1px !important;
+  border: none !important;
+  box-shadow: 0px 8px 9px 0px rgba(96, 94, 94, 0.17) !important;
+  transition: all 0.3s ease-in-out !important;
+}
+
+/* ==========================================================================
+   Buttons
+   ========================================================================== */
+.btn {
+  font-size: 14px;
+  padding: 10px 30px;
+  border-radius: 4px;
+  font-family: 'Rubik', sans-serif;
+  letter-spacing: 1px;
+  font-weight: 500;
+  color: #fff;
+  border: none;
+  text-transform: uppercase;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  display: inline-block; }
+
+.btn:focus,
+.btn:active {
+  box-shadow: none;
+  outline: none; }
+
+.btn-common {
+  background-color: #3ecf8e;
+  position: relative;
+  z-index: 1;
+  box-shadow: 0px 8px 9px 0px rgba(96, 94, 94, 0.17);
+  width: 160px;
+  height: 50px;
+  padding: 14px 15px; }
+
+.btn-common:hover {
+  color: #fff;
+  transform: translateY(-2px); }
+
+.btn-light-bg {
+  background-color: #ff704f; }
+
+.btn-border {
+  border-style: solid;
+  border-width: 1px;
+  cursor: pointer;
+  background-color: transparent;
+  border-color: #3ecf8e;
+  color: #3ecf8e;
+  width: 160px;
+  height: 50px;
+  padding: 14px 15px; }
+
+.btn-border:hover {
+  box-shadow: 0px 8px 9px 0px rgba(96, 94, 94, 0.17);
+  transform: translateY(-2px); }
+
+.btn-border-filled {
+  cursor: pointer;
+  background-color: #3ecf8e;
+  border: 1px solid #3ecf8e;
+  color: #fff;
+  box-shadow: 0px 8px 9px 0px rgba(96, 94, 94, 0.17);
+  width: 180px;
+  height: 50px;
+  padding: 15px 15px; }
+
+.btn-border-filled:hover {
+  color: #fff;
+  background-color: transparent;
+  border-color: #fff;
+  transform: translateY(-2px); }
+
+.btn-lg {
+  padding: 14px 33px;
+  text-transform: uppercase;
+  font-size: 16px; }
+
+.btn-rm {
+  color: #3c9cfd;
+  padding: 10px 0;
+  text-transform: capitalize;
+  font-size: 16px; }
+
+.btn-rm i {
+  vertical-align: middle; }
+
+.btn-singin {
+  background: #7fc9fb;
+  color: #fff;
+  padding: 10px 23px;
+  margin-left: 30px;
+  box-shadow: 0px 8px 9px 0px rgba(96, 94, 94, 0.17); }
+
+.btn-singin:hover,
+.btn-singin:active,
+.btn-singin:focus {
+  color: #fff;
+  box-shadow: 0px 0px 0px 0px rgba(96, 94, 94, 0.17); }
+
+.btn-light-singin:hover,
+.btn-light-singin:active,
+.btn-light-singin:focus {
+  color: #fff;
+  box-shadow: 0px 0px 0px 0px rgba(96, 94, 94, 0.17); }
+
+.btn-apple {
+  border-width: 2px;
+  border-color: #3c96ff;
+  border-style: solid;
+  background: linear-gradient(to right, #3c96ff 0%, #2dfbff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out; }
+
+.btn-apple i {
+  background: linear-gradient(to right, #3c96ff 0%, #2dfbff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; }
+
+.btn-apple:hover,
+.btn-apple:active,
+.btn-apple:focus {
+  background: linear-gradient(to right, #3c96ff 0%, #2dfbff 100%) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important; }
+
+button:focus {
+  outline: none !important; }
+
+.btn-border-fill {
+  background: #fff;
+  border-color: #fff;
+  color: #3c9cfd; }
+
+.btn-subtitle {
+  color: #191c1e;
+  font-family: 'Poppins', sans-serif;
+  background: #dbecff;
+  text-align: center;
+  border-radius: 30px;
+  padding: 6px 30px;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-bottom: 20px;
+  font-size: 14px; }
+
+
+

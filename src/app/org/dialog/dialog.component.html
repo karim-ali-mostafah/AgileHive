@@ -1,0 +1,16 @@
+<h1 mat-dialog-title>Add new organization</h1>
+<div class="content" mat-dialog-content>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Organization Name</mat-label>
+      <input matInput [(ngModel)]="data.org_name">
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-label>Number of People</mat-label>
+      <input matInput [(ngModel)]="data.no_of_people">
+    </mat-form-field>
+</div>
+<div  mat-dialog-actions>
+  <button mat-button (click)="dialogRef.close()">Cancel</button>
+  <button style="margin-left: 7rem;" mat-button (click)="dialogRef.close(data)">Add</button>
+</div>

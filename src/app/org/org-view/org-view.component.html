@@ -1,0 +1,35 @@
+<div class="container">
+  <div class="content1">
+    <div class="ftitle">
+      <h1>Latest Organizations: </h1>
+    </div>
+  </div>
+  <div class="content2">
+    <div class="stitle">
+      <div class="cards">
+        <div *ngFor="let item of projects">
+        <mat-card class="example-card">
+          <mat-card-header>
+            <div mat-card-avatar class="example-header-image">
+              <!-- <img [src]="" alt="Avatar">  -->
+            </div>
+            <mat-card-title class="no-wrap">{{item.org_name}}</mat-card-title>
+            <mat-card-subtitle>Team-managed software</mat-card-subtitle>
+          </mat-card-header>
+          <mat-card-content>
+            <p>Name: {{item.org_name}}</p>
+            <p>Number of People: {{item.no_of_people}}</p>
+            <p>Created At: {{item.created_at | date:'short'}}</p>
+            <p>Last Visited At: {{item.last_visited_at | date:'short'}}</p>
+          </mat-card-content>
+        </mat-card>
+        </div>
+      </div>
+      <div class="buttonGroup">
+        <!-- <button mat-raised-button (click)="openDialog()">Add Organization</button> -->
+        <a href="#" class="view-all-link" style="margin-left: auto; margin-right: 10px; text-decoration: none;">view all</a>
+      </div>
+    </div>
+  </div>
+  <mat-divider></mat-divider>
+</div>

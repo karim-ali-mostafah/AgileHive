@@ -1,0 +1,51 @@
+<div class="card card-container">
+  <form
+  class="row"
+  *ngIf="!isLoggedIn"
+  name="form"
+  (ngSubmit)="f.form.valid && onSubmit()"
+  #f="ngForm"
+  novalidate>
+    <div class="row">
+      <h1 class="text-center"><strong>Hi, Welcome Back!</strong></h1>
+    </div>
+    <div class="row form-group mt-5 mb-3">
+      <div class="d-flex justify-content-center">
+        <mat-form-field style="width: 60%;" appearance="outline">
+          <mat-label>Username or Email</mat-label>
+          <input matInput placeholder="Johnwick@example.com" [formControl]="email" required>
+          <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+        </mat-form-field>
+      </div>
+      <!-- handle error username -->
+    </div>
+    <div class="row form-group">
+      <div class=" mb-5 d-flex justify-content-center">
+        <mat-form-field style="width: 60%;" appearance="outline">
+          <mat-label>Enter your password</mat-label>
+          <input matInput [type]="hide ? 'password' : 'text'" required>
+          <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide" >
+            <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+          </button>
+        </mat-form-field>
+      </div>
+      <!-- handle error password -->
+      <div style="width: 60%;" class="mx-auto form-group">
+        <div class="mb-2 d-flex justify-content-end">
+          <a class="text-decoration-none" href="/forgot-password">Forgot password?</a>
+        </div>
+        <div class="d-flex justify-content-center mb-1">
+          <button class="w-100 main-second-btn" mat-raised-button>login</button>
+        </div>
+        <hr>
+
+      </div>
+
+      <div class="form-group">
+        <div *ngIf="f.submitted && isLoginFailed && errorMessage  " class="alert alert-danger" role="alert">
+          Login failed: {{ errorMessage }}
+        </div>
+      </div>
+    </div>
+  </form>
+</div>

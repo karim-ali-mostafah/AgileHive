@@ -1,0 +1,78 @@
+
+<div class="bread">
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item active" aria-current="page">Organizations</li>
+      <li class="breadcrumb-item active" aria-current="page">orgx</li>
+      <li class="breadcrumb-item active" aria-current="page">People</li>
+    </ol>
+  </nav>
+</div>
+<div class="main">
+  <div class="left">
+    <form class="d-flex">
+      <input class="form-control me-2 with-icon" type="search" placeholder="Search" aria-label="Search">
+    </form>
+  </div>
+  <div class="right" style="margin-right: 30px;">
+    <button mat-raised-button>
+      Invite<i class="fa-solid fa-plus"></i> 
+    </button>
+  </div>
+</div>
+
+<div class="tables">
+<mat-tab-group>
+  <mat-tab label="Current People">
+    <div>
+      <ngx-datatable class="material"
+        [rows]="rows"
+        [columns]="columns"
+        [columnMode]="'force'"
+        [headerHeight]="50"
+        [footerHeight]="50"
+        [rowHeight]="'auto'">
+
+      <ngx-datatable-column prop="name" name="Name"></ngx-datatable-column>
+      <ngx-datatable-column prop="role" name="Role"></ngx-datatable-column>
+      <ngx-datatable-column prop="joined_at" name="Joined At" [pipe]="{ transform: formatDate }"></ngx-datatable-column>
+      <ngx-datatable-column prop="salary_per_hr" name="Salary Per Hour"></ngx-datatable-column>
+      <ngx-datatable-column prop="working_hours" name="Working Hours"></ngx-datatable-column>
+
+      <ngx-datatable-column name="Actions">
+        <ng-template let-rowIndex="rowIndex" let-row="row" ngx-datatable-cell-template>
+           <i *ngIf="!isEditing || rowIndex !== editingRowIndex" class="fa-solid fa-user-pen" (click)="startEditing(rowIndex)" style="cursor:pointer;"></i> |
+           <i *ngIf="!isEditing || rowIndex !== editingRowIndex" class="fa-solid fa-trash" (click)="deleteRow(rowIndex)" style="cursor:pointer;"></i>
+           <i *ngIf="isEditing && rowIndex === editingRowIndex" class="fa-solid fa-check" (click)="saveChanges(rowIndex)" style="cursor:pointer;"></i> 
+           <i *ngIf="isEditing && rowIndex === editingRowIndex" class="fa-solid fa-xmark" (click)="cancelEditing(rowIndex)" style="cursor:pointer;"></i>
+              </ng-template>
+              </ngx-datatable-column>
+
+      </ngx-datatable>
+    </div>
+  </mat-tab>
+  <mat-tab label="Invited People">
+    <div>
+      <ngx-datatable class="material"
+      [rows]="rows2"
+      [columns]="columns2"
+      [columnMode]="'force'"
+      [headerHeight]="50"
+      [footerHeight]="50"
+      [rowHeight]="'auto'">
+    <ngx-datatable-column prop="email" name="Email"></ngx-datatable-column>
+    <ngx-datatable-column prop="invited_at" name="Invited At" [pipe]="{ transform: formatDate }"></ngx-datatable-column>
+    <ngx-datatable-column prop="status" name="Status"></ngx-datatable-column>
+    <ngx-datatable-column name="Actions">
+      <ng-template let-rowIndex="rowIndex" let-row="row" ngx-datatable-cell-template>
+        <i class="fa-solid fa-trash" (click)="deleteRow2(rowIndex)" style="cursor:pointer;"></i>
+      </ng-template>
+    </ngx-datatable-column>
+
+</ngx-datatable>
+
+
+    </div>
+  </mat-tab>
+</mat-tab-group>
+</div>

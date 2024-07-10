@@ -1,0 +1,54 @@
+.container{
+  margin:0px;
+  max-width: 100%;
+}
+.content1{
+height: 100px;
+display: flex;
+border-bottom: 1px solid #ccc;
+}
+.ftitle{
+display: flex;
+margin: 20px;
+flex-direction: row;
+justify-content: space-between;
+align-items: center;
+width: 100%;
+}
+.buttonGroup {
+display: flex;
+gap: 10px;
+}
+.content2 {
+min-height: 280px;
+max-height: 1000px;
+}
+
+.cards {
+display: flex;
+flex-direction: row;
+flex-wrap: wrap;
+justify-content: flex-start;
+margin: 15px;
+}
+.example-card p  {
+white-space: nowrap;
+overflow: hidden;
+text-overflow: ellipsis;
+width: 400px;
+}
+.example-card {
+margin: 10px;
+min-width: 200px;
+min-height: 200px;
+}
+.example-header-image {
+background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+background-size: cover;
+}
+.no-wrap {
+white-space: nowrap;
+overflow: hidden;
+text-overflow: ellipsis;
+max-width: 200px;
+}
